@@ -1,4 +1,3 @@
-
 import com.grailsrocks.taxonomy.Taxon
 import com.grailsrocks.taxonomy.TaxonomyService
 
@@ -37,12 +36,7 @@ Add hierarichal tags (taxonomies) to any domain classes.
     }
 
     def doWithDynamicMethods = { ctx ->
-        def taxoService = ctx.taxonomyService
-        
-        // Make sure global taxo is initialized
-        taxoService.init()
-        
-        applyDynamicMethods(application)
+        // Removed initialization of service 
     }
 
     def applyDynamicMethods(application) {
@@ -106,7 +100,12 @@ Add hierarichal tags (taxonomies) to any domain classes.
     }
 
     def doWithApplicationContext = { applicationContext ->
-        // TODO Implement post initialization spring config (optional)
+        def taxoService = applicationContext.taxonomyService
+        
+        // Make sure global taxo is initialized
+        taxoService.init()
+        
+        applyDynamicMethods(application)
     }
 
     def onChange = { event ->
