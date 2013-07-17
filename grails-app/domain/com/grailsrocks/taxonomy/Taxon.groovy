@@ -9,6 +9,7 @@ class Taxon {
     static mapping = {
         cache true
         name index:'taxon_name_idx'
+        datasources(['DEFAULT', 'readReplica'])
     }
 
     static belongsTo = [parent:Taxon, scope:Taxonomy]

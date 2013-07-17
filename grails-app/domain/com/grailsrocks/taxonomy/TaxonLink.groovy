@@ -11,4 +11,8 @@ class TaxonLink {
         className(nullable:false, blank:false)
         objectId(nullable:false, blank:false)
     }
+
+    static mapping = {
+        datasources(['DEFAULT', 'readReplica'])
+    }
 }
