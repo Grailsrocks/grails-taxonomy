@@ -1,0 +1,64 @@
+<plugin name='taxonomy' version='1.2' grailsVersion='2.2.3 &gt; *'>
+  <author>Marc Palmer</author>
+  <authorEmail>marc@grailsrocks.com</authorEmail>
+  <title>Taxonomy Plugin</title>
+  <description>\
+Add hierarichal tags (taxonomies) to any domain classes.
+</description>
+  <documentation>http://grails.org/Taxonomy+Plugin</documentation>
+  <type>TaxonomyGrailsPlugin</type>
+  <resources>
+    <resource>com.grailsrocks.taxonomy.Taxon</resource>
+    <resource>com.grailsrocks.taxonomy.TaxonLink</resource>
+    <resource>com.grailsrocks.taxonomy.Taxonomy</resource>
+    <resource>com.grailsrocks.taxonomy.test.Book</resource>
+    <resource>com.grailsrocks.taxonomy.TaxonomyService</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://files.couchbase.com/maven2/' url='http://files.couchbase.com/maven2/' />
+    <repository name='http://raykrueger.googlecode.com/svn/repository' url='http://raykrueger.googlecode.com/svn/repository/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='commons-net' name='commons-net' version='3.2' />
+      <dependency group='log4j' name='apache-log4j-extras' version='1.1' />
+      <dependency group='com.amazonaws' name='aws-java-sdk' version='1.3.27' />
+    </compile>
+    <runtime>
+      <dependency group='mysql' name='mysql-connector-java' version='5.1.23' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <compile>
+      <plugin group='org.grails.plugins' name='grails-ant' version='0.1.3' />
+      <plugin group='org.grails.plugins' name='executor' version='0.3' />
+      <plugin group='org.grails.plugins' name='ajax-uploader' version='1.1' />
+      <plugin group='org.grails.plugins' name='cookie' version='0.4' />
+      <plugin group='org.grails.plugins' name='taggable' version='1.0.1' />
+      <plugin group='org.grails.plugins' name='mail' version='1.0.1' />
+      <plugin group='org.grails.plugins' name='memcached' version='1.0.3.2' />
+      <plugin group='org.grails.plugins' name='webpurify' version='0.1' />
+      <plugin group='org.grails.plugins' name='google-analytics' version='2.0' />
+      <plugin group='org.grails.plugins' name='quartz' version='1.0-RC9' />
+      <plugin group='org.grails.plugins' name='cdn-resources' version='0.2.1' />
+    </compile>
+    <runtime>
+      <plugin group='org.grails.plugins' name='zipped-resources' version='1.0' />
+      <plugin group='org.grails.plugins' name='hibernate' version='2.2.3' />
+      <plugin group='org.grails.plugins' name='jquery-ui' version='1.8.24' />
+      <plugin group='org.grails.plugins' name='handlebars-resources' version='0.3.6' />
+      <plugin group='org.grails.plugins' name='cache-headers' version='1.1.5' />
+      <plugin group='org.grails.plugins' name='lesscss-resources' version='1.3.3' />
+      <plugin group='org.grails.plugins' name='handlebars' version='1.1.0' />
+      <plugin group='org.grails.plugins' name='cached-resources' version='1.0' />
+      <plugin group='org.grails.plugins' name='jquery' version='1.8.3' />
+    </runtime>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.3' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
